@@ -28,5 +28,8 @@ public class Main {
         System.out.println(blouse.getDescription() + " - $" + blouse.getPrice());
         System.out.println(pants.getDescription() + " - $" + pants.getPrice());
         System.out.println(shoes.getDescription() + " - $" + shoes.getPrice());
+        store.detach(customer1);
+        store.detach(customer2);
+
     }
 }
