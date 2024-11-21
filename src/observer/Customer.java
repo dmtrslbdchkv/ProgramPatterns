@@ -5,6 +5,7 @@ public class Customer implements Observer {
 
     public Customer(String name) {
         this.name = name;
+        System.out.println("Покупатель " + name + " создан");
     }
 
     @Override

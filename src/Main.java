@@ -11,23 +11,21 @@ public class Main {
         Clothing pants = factory.createClothing("pants", "Синие брюки", 49.99);
         Clothing shoes = factory.createClothing("shoes", "Кроссовки", 69.99);
 
-        // Создание магазина и клиентов
         ClothingStore store = new ClothingStore();
         Customer customer1 = new Customer("Алексей");
         Customer customer2 = new Customer("Мария");
+        Customer customer3 = new Customer("Антон");
 
-        // Подписка клиентов на уведомления
         store.attach(customer1);
         store.attach(customer2);
 
-        // Добавление новой коллекции и распродажа
         store.addNewCollection("Летняя коллекция");
         store.startSale("Скидки до 50% на все товары!");
 
-        // Вывод информации о созданной одежде
-        System.out.println(blouse.getDescription() + " - $" + blouse.getPrice());
-        System.out.println(pants.getDescription() + " - $" + pants.getPrice());
-        System.out.println(shoes.getDescription() + " - $" + shoes.getPrice());
+        System.out.println(blouse.getDescription() + " - руб." + blouse.getPrice());
+        System.out.println(pants.getDescription() + " - руб." + pants.getPrice());
+        System.out.println(shoes.getDescription() + " - руб." + shoes.getPrice());
+
         store.detach(customer1);
         store.detach(customer2);
 
